@@ -2,7 +2,6 @@ from app import app
 from flask import request
 import os
 from flask import Flask, render_template
-from model.predict import beauty_predict
 import pandas as pd
 from PIL import Image
 
@@ -24,10 +23,14 @@ def predict(photo=None):
         score = scores.loc[scores['name'] == photo, 'score'].iloc[0]
         
     except:
-        
-        score = beauty_predict('static/' + photo + '.jpg')
-        row = pd.DataFrame([[photo,score]], columns=['name', 'score'])
-        scores = scores.append(row)
-        scores.to_csv(csv_path)
+        try:
+            from model.predict import beauty_predict
 
+            score = beauty_predict('static/' + photo + '.jpg')
+            row = pd.DataFrame([[photo,score]], columns=['name', 'score'])
+            scores = scores.append(row)
+            scores.to_csv(csv_path)
+        except:
+            return "Something went wrong"
+    
     return render_template("prediction.html", path = path, score = score)
