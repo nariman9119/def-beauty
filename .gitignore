@@ -1,3 +1,4 @@
 model/models/
 model/__pycache__/
 __pycache__/
+experiments/.ipynb_checkpoints
