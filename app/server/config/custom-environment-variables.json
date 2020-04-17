@@ -1,0 +1,10 @@
+{
+  "cipherKey": "CIPHER_KEY",
+  "dbUser": "MONGODB_APP_USER",
+  "dbPassword": "MONGODB_APP_PASS",
+  "dbName": "MONGODB_APP_DB",
+  "dbPort": "MONGODB_PORT",
+  "dbHost": "MONGODB_HOST",
+  "jwtSecret": "JWT_SECRET",
+  "appVersion": "APP_VERSION"
+}

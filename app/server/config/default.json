@@ -1,0 +1,10 @@
+{
+  "cipherKey": "cipherKey",
+  "dbUser": "tinder-plus-user",
+  "dbPassword": "tinder-plus-password",
+  "dbName": "tinder-plus",
+  "dbPort": "17072",
+  "dbHost": "127.0.0.1",
+  "jwtSecret": "TINDER-PLUS-JWT-SECRET",
+  "appVersion": "0.0.1"
+}

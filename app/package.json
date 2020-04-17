@@ -1,0 +1,23 @@
+{
+  "name": "tinder-plus",
+  "version": "0.0.1",
+  "description": "Tinder Swipes Automizer",
+  "author": "Petr Nikolaev & Azat Belgibayev",
+  "license": "Commercial",
+  "private": true,
+  "repository": {
+    "url": "https://github.com/ogrenich/frootix-tech-scmp"
+  },
+  "scripts": {
+    "client-dev": "cd client && npm run dev",
+    "client-build": "cd client && npm run build",
+    "server-dev": "cd server && npm run dev",
+    "server-build": "cd server && npm run build",
+    "dev": "cross-env NODE_ENV=development concurrently --kill-others-on-fail \"npm run server-dev\" \"npm run client-dev\"",
+    "build": "cross-env NODE_ENV=production concurrently --kill-others-on-fail \"npm run server-build\" \"npm run client-build\""
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0"
+  }
+}
